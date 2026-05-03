@@ -1,0 +1,35 @@
+{
+    "metadata": {
+    "title": "Maple Digital | Agence Web",
+    "description": "Nous créons des sites web performants qui convertissent les visiteurs en clients."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "services": "Services",
+    "cta": "Soumission Gratuite"
+  },
+  "footer": {
+    "copyright": "Tous droits réservés.",
+    "hours": "Lun-Ven: 9h - 18h"
+  },
+  "legal" : {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  },
+  "services": {
+    "webDesign": {
+      "title": "Conception de sites web"
+    },
+    "seo": {
+      "title": "Optimisation SEO"
+    },
+    "performance": {
+      "title": "Performance"
+    },
+    "maintenance": {
+      "title": "Maintenance"
+    }
+  }
+}

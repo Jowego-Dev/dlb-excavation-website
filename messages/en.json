@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Maple Digital | Web Development Agency",
+    "description": "We build high-performance websites that convert visitors into clients."
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "services": "Services",
+    "cta": "Get a free quote"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "hours": "Mon-Fri: 9am - 6pm"
+  },
+  "legal" : {
+    "privacy": "Privacy policy",
+    "terms": "Terms of service"
+  },
+  "services": {
+    "webDesign": {
+      "title": "Website Design"
+    },
+    "seo": {
+      "title": "SEO Optimization"
+    },
+    "performance": {
+      "title": "Performance"
+    },
+    "maintenance": {
+      "title": "Maintenance"
+    }
+  }
+}
