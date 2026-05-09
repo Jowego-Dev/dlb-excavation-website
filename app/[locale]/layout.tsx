@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
+import Navigation from "@/components/navigation/Navigation";
 import "../globals.css";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer/Footer";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -49,7 +49,7 @@ export default async function Layout({ children, params }: Props) {
     <html lang={locale} className={`h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <Navbar locale={locale} />
+          <Navigation locale={locale} />
           {children}
           <Footer locale={locale} />
         </NextIntlClientProvider>

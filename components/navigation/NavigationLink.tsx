@@ -2,16 +2,22 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navbarStyles as styles } from "@/lib/styles";
+import { navigationStyles as styles } from "@/lib/styles/navigation/navigationStyles";
 import { useLocale, useTranslations } from "next-intl";
-import { buildLocalizedPath, isActivePath } from "@/lib/nav-utils";
+import {
+  buildLocalizedPath,
+  isActivePath,
+} from "@/lib/navigation/navigation.utils";
 
-type NavItemProps = {
+type NavigationLinkProps = {
   href: string;
   translationKey: string;
 };
 
-export default function NavbarItem({ href, translationKey }: NavItemProps) {
+export default function NavigationLink({
+  href,
+  translationKey,
+}: NavigationLinkProps) {
   const locale = useLocale();
   const t = useTranslations("navigation");
   const pathname = usePathname();
@@ -22,12 +28,10 @@ export default function NavbarItem({ href, translationKey }: NavItemProps) {
   return (
     <Link
       href={target}
-      className={`${styles.link} px-2`}
+      className={`inline-flex ${styles.navigationLinkBase} ${isActive ? styles.navigationLinkActive : `${styles.navigationLinkDefault} ${styles.navigationLinkHover}`} px-2`}
       aria-current={isActive ? "page" : undefined}
     >
-      <span className={isActive ? styles.activeLink : ""}>
-        {t(translationKey)}
-      </span>
+      {t(translationKey)}
     </Link>
   );
 }

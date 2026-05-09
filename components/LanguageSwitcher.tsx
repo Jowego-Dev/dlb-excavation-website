@@ -7,7 +7,7 @@ import { useLocale } from "next-intl";
 import { locales, Locale } from "@/i18n/config";
 import { GrLanguage } from "react-icons/gr";
 import { FaCheck } from "react-icons/fa";
-import { languageSwitcher as styles } from "@/lib/styles";
+import { languageSwitcherStyles as styles } from "@/lib/styles/components/languageSwitcherStyles";
 
 const LABELS: Record<Locale, string> = {
   en: "English",
@@ -66,39 +66,40 @@ export default function LanguageSwitcher() {
   }, [pathname]);
 
   return (
-    <div ref={ref} className={`relative ${styles.container}`}>
+    <div ref={ref} className={styles.container}>
       <button
         onClick={() => setOpen((prev) => !prev)}
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls="language-menu"
-        className={`flex items-center gap-2 py-4 px-3 md:py-2 -mx-2 ${styles.button}`}
+        className={`flex items-center gap-2 py-4 px-3 md:py-2 -mx-2 ${styles.buttonBase} ${styles.buttonDefault} ${styles.buttonHover}`}
       >
-        <GrLanguage className={`w-5 h-5`} />
+        <GrLanguage className="w-5 h-5" />
 
-        <span className="flex items-center gap-1 uppercase">
-          <span className={currentLocale === "en" ? styles.activeLanguage : ""}>
+        <span className={`items-center gap-1 ${styles.languageBase}`}>
+          <span className={currentLocale === "en" ? styles.languageActive : ""}>
             EN
           </span>
-
           <span>/</span>
-
-          <span className={currentLocale === "fr" ? styles.activeLanguage : ""}>
+          <span className={currentLocale === "fr" ? styles.languageActive : ""}>
             FR
           </span>
         </span>
       </button>
 
       {open && (
-        <div className={`absolute right-0 mt-2 w-36 ${styles.menu}`}>
+        <div
+          id="language-menu"
+          className={`absolute right-0 mt-2 w-50 ${styles.menu}`}
+        >
           {locales.map((lang) => (
             <Link
               key={lang}
               href={getPath(lang)}
-              className={`flex items-center justify-between px-4 py-4 md:px-3 md:py-2 ${styles.menuItem}`}
+              className={`flex items-center justify-between px-4 py-4 md:px-6 md:py-4 ${styles.itemBase} ${styles.itemHover}`}
             >
               <div className="flex items-center gap-2">
-                <span className={`w-5 ${styles.abreviation}`}>
+                <span className={`w-6 ${styles.abbreviation}`}>
                   {lang.toUpperCase()}
                 </span>
                 <span className={styles.label}>{LABELS[lang]}</span>
