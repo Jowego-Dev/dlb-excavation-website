@@ -2,17 +2,21 @@
 
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS } from "@/lib/navigation";
+import { PAGES } from "@/lib/navigation/pages";
 import Link from "next/link";
-import LanguageToggler from "./LanguageSwitcher";
-import { mobileMenuStyles as styles } from "@/lib/styles";
+import LanguageToggler from "../LanguageSwitcher";
+import { navigationMenuStyles as styles } from "@/lib/styles/navigation/navigationMenuStyles";
 import { FaChevronRight } from "react-icons/fa6";
 import { MdClose } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
-import { buildLocalizedPath, isActivePath } from "@/lib/nav-utils";
+import {
+  buildLocalizedPath,
+  isActivePath,
+} from "@/lib/navigation/navigation.utils";
+import { CTAButton } from "../CTAButton";
 
-export default function MobileMenu() {
+export default function NavigationMenu() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
@@ -45,7 +49,7 @@ export default function MobileMenu() {
   }, [open]);
 
   return (
-    <div ref={menuRef} className="flex items-center gap-10 md:hidden">
+    <div ref={menuRef} className="flex items-center gap-10 lg:hidden">
       <LanguageToggler />
       <button
         type="button"
@@ -68,7 +72,7 @@ export default function MobileMenu() {
           className={`absolute inset-x-0 top-full z-50 ${styles.menuContainer}`}
         >
           <ul className="flex flex-col gap-2 p-4">
-            {NAV_LINKS.map((link) => {
+            {PAGES.map((link) => {
               const target = buildLocalizedPath(locale, link.href);
               const isActive = isActivePath(pathname, target);
 
@@ -76,21 +80,15 @@ export default function MobileMenu() {
                 <li key={link.href}>
                   <Link
                     href={target}
-                    className={`${styles.link} flex items-center justify-between w-full px-4 py-3`}
+                    className={`flex items-center justify-between w-full px-4 py-3 ${styles.itemBase} ${styles.itemHover} ${isActive ? styles.itemActive : styles.itemDefault}`}
                     aria-current={isActive ? "page" : undefined}
                     onClick={closeMenu}
                   >
-                    <span className={isActive ? styles.activeLink : ""}>
-                      {t(link.key)}
-                    </span>
+                    {t(link.key)}
 
                     <FaChevronRight
                       aria-hidden="true"
-                      className={`h-5 w-5 ${
-                        isActive
-                          ? `rotate-180 ${styles.activeLinkIcon}`
-                          : `${styles.linkIcon}`
-                      }`}
+                      className={`${styles.iconBase} ${isActive ? styles.iconActive : styles.iconDefault}`}
                     />
                   </Link>
                 </li>
@@ -98,14 +96,8 @@ export default function MobileMenu() {
             })}
           </ul>
 
-          <div className={`mt-4 px-4 pb-4 pt-4 ${styles.bottomContainer}`}>
-            <Link
-              href="/contact"
-              className={`${styles.ctaButton} block py-4 text-center`}
-              onClick={closeMenu}
-            >
-              {t("cta")}
-            </Link>
+          <div className={`mt-4 px-4 pb-4 pt-4`}>
+            <CTAButton />
           </div>
         </div>
       )}

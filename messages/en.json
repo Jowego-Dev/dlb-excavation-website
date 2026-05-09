@@ -8,28 +8,69 @@
     "about": "About",
     "contact": "Contact",
     "services": "Services",
-    "cta": "Get a free quote"
+    "cta": "Free Estimate",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of service"
   },
   "footer": {
-    "copyright": "All rights reserved.",
-    "hours": "Mon-Fri: 9am - 6pm"
+    "cta": {
+      "headline": "Transform Your Property with Confidence.",
+      "subline": "No obligation, free estimates.",
+      "call": "Call Us"
+    },
+    "brand": {
+      "serving": "Serving Gatineau and surrounding areas",
+      "description": "A proudly family-owned company committed to quality and integrity.",
+      "follow": "Follow us on"
+    },
+    "headings": {
+      "services": "Services",
+      "about": "About Us",
+      "info": "Information"
+    },
+    "info": {
+      "hours": "Mon-Fri: 9am - 6pm",
+      "hours-subline": "",
+      "servingArea": "Serving ville1, ville2, ville3, ville4, ville5 and surrounding areas."
+    },
+    "copyright": "© {year} {name}.",
+    "rights": "All rights reserved",
+    "createdBy": "Website created by"
   },
-  "legal" : {
+  "legal": {
     "privacy": "Privacy policy",
     "terms": "Terms of service"
   },
   "services": {
-    "webDesign": {
-      "title": "Website Design"
+    "excavation": {
+      "title": "Excavation"
     },
-    "seo": {
-      "title": "SEO Optimization"
+    "landscaping": {
+      "title": "Landscaping"
     },
-    "performance": {
-      "title": "Performance"
+    "retaining-wall": {
+      "title": "Retaining Wall"
     },
-    "maintenance": {
-      "title": "Maintenance"
+    "tree-removal": {
+      "title": "Tree Removal"
+    },
+    "stump-removal": {
+      "title": "Stump Removal"
+    },
+    "private-road-construction": {
+      "title": "Private Road Construction"
+    },
+    "forestry-road-development": {
+      "title": "Forestry Road Development"
+    },
+    "dump-truck-services": {
+      "title": "Dump Truck Services"
+    },
+    "material-delivery": {
+      "title": "Material Delivery"
+    },
+    "snow-removal": {
+      "title": "Snow Removal"
     }
   }
 }

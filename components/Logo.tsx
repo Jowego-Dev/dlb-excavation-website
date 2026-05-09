@@ -1,23 +1,34 @@
 import Link from "next/link";
-import { focusRing } from "@/lib/styles";
+import { focusRing } from "@/lib/styles/styles";
+import { cn } from "@/lib/utils";
+
+type LogoSize = "small" | "large";
+type LogoTheme = "dark" | "light";
 
 type LogoProps = {
-  variant?: "light" | "dark";
+  className?: string;
+  size?: LogoSize;
+  theme?: LogoTheme;
 };
 
-export default function Logo({ variant = "light" }: LogoProps) {
-  const src =
-    variant === "light"
-      ? "/maple-digital-logo-light.svg"
-      : "/maple-digital-logo-dark.svg";
+export default function Logo({
+  className,
+  size = "large",
+  theme = "dark",
+}: LogoProps) {
+  const logoSrc = `/logo/${size}-${theme}.svg`;
 
   return (
     <Link
       href="/"
-      aria-label="Maple Digital home"
-      className={`inline-block p-1 ${focusRing}`}
+      aria-label="DLB Excavation home"
+      className={cn("shrink-0", focusRing)}
     >
-      <img src={src} alt="Maple Digital logo" className={`h-15 w-auto`} />
+      <img
+        src={logoSrc}
+        alt="DLB Excavation logo"
+        className={cn("h-auto w-auto", className)}
+      />
     </Link>
   );
 }

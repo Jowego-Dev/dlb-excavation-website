@@ -1,5 +1,5 @@
 {
-    "metadata": {
+  "metadata": {
     "title": "Maple Digital | Agence Web",
     "description": "Nous créons des sites web performants qui convertissent les visiteurs en clients."
   },
@@ -8,28 +8,69 @@
     "about": "À propos",
     "contact": "Contact",
     "services": "Services",
-    "cta": "Soumission Gratuite"
+    "cta": "Estimation gratuite",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
   },
   "footer": {
-    "copyright": "Tous droits réservés.",
-    "hours": "Lun-Ven: 9h - 18h"
+    "cta": {
+      "headline": "Transformez votre propriété en toute confiance.",
+      "subline": "Estimations gratuites, sans obligation.",
+      "call": "Appelez-nous"
+    },
+    "brand": {
+      "serving": "Nous servons Gatineau et les environs.",
+      "description": "Une entreprise familiale fièrement engagée envers la qualité et l’intégrité.",
+      "follow": "Suivez-nous sur"
+    },
+    "headings": {
+      "services": "Services",
+      "about": "À propos",
+      "info": "Informations"
+    },
+    "info": {
+      "hours": "Lun-Ven: 9h - 18h",
+      "hours-subline": "",
+      "servingArea": "Nous servons ville1, ville2, ville3, ville4, ville5 et les environs."
+    },
+    "copyright": "© {year} {name}.",
+    "rights": "Tous droits réservés.",
+    "createdBy": "Site web réalisé par"
   },
-  "legal" : {
+  "legal": {
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation"
   },
   "services": {
-    "webDesign": {
-      "title": "Conception de sites web"
+    "excavation": {
+      "title": "Excavation"
     },
-    "seo": {
-      "title": "Optimisation SEO"
+    "landscaping": {
+      "title": "Terrassement"
     },
-    "performance": {
-      "title": "Performance"
+    "retaining-wall": {
+      "title": "Murs de soutènement"
     },
-    "maintenance": {
-      "title": "Maintenance"
+    "tree-removal": {
+      "title": "Abattage d’arbres"
+    },
+    "stump-removal": {
+      "title": "Essouchage"
+    },
+    "private-road-construction": {
+      "title": "Construction de chemins privés"
+    },
+    "forestry-road-development": {
+      "title": "Aménagement de chemins forestiers"
+    },
+    "dump-truck-services": {
+      "title": "Transport en vrac"
+    },
+    "material-delivery": {
+      "title": "Livraison de matériaux"
+    },
+    "snow-removal": {
+      "title": "Déneigement"
     }
   }
 }
