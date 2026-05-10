@@ -1,9 +1,27 @@
-export default function Home() {
+import HomeBeforeAfter from "@/components/home/HomeBeforeAfter";
+import HomeFinalCta from "@/components/home/HomeFinalCta";
+import HomeHero from "@/components/home/HomeHero";
+import HomeProcess from "@/components/home/HomeProcess";
+import HomeServices from "@/components/home/HomeServices";
+import HomeStatsStrip from "@/components/home/HomeStatsStrip";
+import HomeTestimonials from "@/components/home/HomeTestimonials";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center">
-      <main className="flex flex-1 w-full max-w-3xl">
-        <a>Home</a>
-      </main>
-    </div>
+    <main className="flex min-h-0 flex-1 flex-col overflow-x-hidden">
+      <HomeHero locale={locale} />
+      <HomeStatsStrip />
+      <HomeServices locale={locale} />
+      <HomeBeforeAfter locale={locale} />
+      <HomeTestimonials />
+      <HomeProcess />
+      <HomeFinalCta locale={locale} />
+    </main>
   );
 }
