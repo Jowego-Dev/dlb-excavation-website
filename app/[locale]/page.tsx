@@ -1,5 +1,4 @@
 import HomeBeforeAfter from "@/components/home/HomeBeforeAfter";
-import HomeFinalCta from "@/components/home/HomeFinalCta";
 import HomeHero from "@/components/home/HomeHero";
 import HomeProcess from "@/components/home/HomeProcess";
 import HomeServices from "@/components/home/HomeServices";
@@ -21,7 +20,6 @@ export default async function Home({ params }: Props) {
       <HomeBeforeAfter locale={locale} />
       <HomeTestimonials />
       <HomeProcess />
-      <HomeFinalCta locale={locale} />
     </main>
   );
 }

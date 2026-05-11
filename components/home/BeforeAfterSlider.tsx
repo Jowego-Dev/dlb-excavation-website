@@ -58,7 +58,7 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-neutral-900 shadow-xl ring-1 ring-white/10 sm:aspect-video sm:rounded-2xl"
+      className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900 shadow-xl ring-1 ring-white/10 sm:aspect-video sm:rounded-2xl"
       onPointerDown={(e) => {
         dragging.current = true;
         e.currentTarget.setPointerCapture(e.pointerId);
@@ -77,7 +77,13 @@ export default function BeforeAfterSlider({
         style={{ clipPath: `inset(0 ${100 - pct}% 0 0)` }}
         aria-hidden
       >
-        <Image src={beforeSrc} alt="" fill className="pointer-events-none object-cover object-left" sizes="(max-width:1024px) 100vw, 50vw" />
+        <Image
+          src={beforeSrc}
+          alt=""
+          fill
+          className="pointer-events-none object-cover object-left"
+          sizes="(max-width:1024px) 100vw, 50vw"
+        />
       </div>
       <span className="pointer-events-none absolute left-3 top-3 rounded bg-black/55 px-2 py-1 text-xs font-medium uppercase tracking-wide text-white">
         {beforeLabel}

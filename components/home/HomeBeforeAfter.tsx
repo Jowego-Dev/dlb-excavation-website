@@ -13,7 +13,9 @@ export default function HomeBeforeAfter({ locale }: Props) {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <div className="max-w-xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-lime-400">Before &amp; after</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-lime-400">
+            Before &amp; after
+          </p>
           <h2
             id="home-before-after-heading"
             className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
@@ -21,8 +23,8 @@ export default function HomeBeforeAfter({ locale }: Props) {
             See the transformation
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/85 sm:text-lg">
-            Real projects, real results. Sloped yards, wet basements, and tired entrances—your property
-            has more potential than you think.
+            Real projects, real results. Sloped yards, wet basements, and tired
+            entrances—your property has more potential than you think.
           </p>
           <Link
             href={`${base}#services`}
@@ -31,7 +33,10 @@ export default function HomeBeforeAfter({ locale }: Props) {
             View more projects
           </Link>
         </div>
-        <BeforeAfterSlider beforeSrc="/images/home/before.png" afterSrc="/images/home/after.png" />
+        <BeforeAfterSlider
+          beforeSrc="/images/home/before.webp"
+          afterSrc="/images/home/after.webp"
+        />
       </div>
     </section>
   );
