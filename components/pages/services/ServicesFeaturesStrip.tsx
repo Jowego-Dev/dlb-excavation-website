@@ -1,5 +1,5 @@
 import { FaClock, FaMapMarkerAlt, FaShieldAlt, FaStar } from "react-icons/fa";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 
 const features = [
   {
@@ -43,8 +43,8 @@ export default function ServicesFeaturesStrip() {
               Local. Reliable. Built for our climate.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-neutral-600 sm:text-lg">
-              We treat every driveway, shoreline, and backyard like it has to perform for decades—not just
-              look good on handover day.
+              We treat every driveway, shoreline, and backyard like it has to
+              perform for decades—not just look good on handover day.
             </p>
           </div>
 
@@ -59,8 +59,12 @@ export default function ServicesFeaturesStrip() {
                     >
                       <Icon className="h-5 w-5" />
                     </span>
-                    <h3 className="mt-4 text-base font-bold text-neutral-900">{title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">{body}</p>
+                    <h3 className="mt-4 text-base font-bold text-neutral-900">
+                      {title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                      {body}
+                    </p>
                   </div>
                 </li>
               ))}

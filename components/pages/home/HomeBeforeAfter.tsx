@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BeforeAfterSlider from "./BeforeAfterSlider";
+import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
 
 type Props = { locale: string };
 

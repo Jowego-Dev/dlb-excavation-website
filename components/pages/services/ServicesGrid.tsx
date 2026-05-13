@@ -11,7 +11,7 @@ import {
   FaTruck,
 } from "react-icons/fa";
 import type { IconType } from "react-icons";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 
 type ServiceItem = {
   slug: string;
@@ -32,7 +32,11 @@ const services: ServiceItem[] = [
     image: "/images/services/grid-1.png",
     imageAlt: "Excavation equipment on a graded lot",
     icon: FaTools,
-    bullets: ["Basements & additions", "Utility trenches", "Rock-aware planning"],
+    bullets: [
+      "Basements & additions",
+      "Utility trenches",
+      "Rock-aware planning",
+    ],
   },
   {
     slug: "retaining-walls",
@@ -124,8 +128,9 @@ export default function ServicesGrid() {
             Our excavation &amp; landscaping services
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg">
-            One crew, one schedule, and one standard of finish—from first cut to final rake—so your
-            property is ready for the next phase with confidence.
+            One crew, one schedule, and one standard of finish—from first cut to
+            final rake—so your property is ready for the next phase with
+            confidence.
           </p>
         </div>
 
@@ -149,12 +154,22 @@ export default function ServicesGrid() {
                   </div>
                 </div>
                 <div className="flex flex-1 flex-col p-5 sm:p-6">
-                  <h3 className="text-lg font-bold text-neutral-900">{s.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{s.description}</p>
+                  <h3 className="text-lg font-bold text-neutral-900">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">
+                    {s.description}
+                  </p>
                   <ul className="mt-5 space-y-2.5 border-t border-neutral-100 pt-5">
                     {s.bullets.map((b) => (
-                      <li key={b} className="flex gap-2 text-sm text-neutral-700">
-                        <FaCheck className="mt-0.5 h-4 w-4 shrink-0 text-lime-600" aria-hidden />
+                      <li
+                        key={b}
+                        className="flex gap-2 text-sm text-neutral-700"
+                      >
+                        <FaCheck
+                          className="mt-0.5 h-4 w-4 shrink-0 text-lime-600"
+                          aria-hidden
+                        />
                         <span>{b}</span>
                       </li>
                     ))}

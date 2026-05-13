@@ -8,6 +8,8 @@ import {
   buildLocalizedPath,
   isActivePath,
 } from "@/lib/navigation/navigation.utils";
+import { useNavbarChrome } from "./NavigationChrome";
+import { cn } from "@/lib/utils";
 
 type NavigationLinkProps = {
   href: string;
@@ -21,14 +23,28 @@ export default function NavigationLink({
   const locale = useLocale();
   const t = useTranslations("navigation");
   const pathname = usePathname();
+  const { surface } = useNavbarChrome();
 
   const target = buildLocalizedPath(locale, href);
   const isActive = isActivePath(pathname, target);
 
+  const onHero = surface === "hero";
+  const linkColorClasses = onHero
+    ? isActive
+      ? styles.navigationLinkActive
+      : `${styles.navigationLinkDefault} ${styles.navigationLinkHover}`
+    : isActive
+      ? styles.navigationLinkBarActive
+      : `${styles.navigationLinkBarDefault} ${styles.navigationLinkBarHover}`;
+
   return (
     <Link
       href={target}
-      className={`inline-flex ${styles.navigationLinkBase} ${isActive ? styles.navigationLinkActive : `${styles.navigationLinkDefault} ${styles.navigationLinkHover}`} px-2`}
+      className={cn(
+        "inline-flex px-2",
+        styles.navigationLinkBase,
+        linkColorClasses,
+      )}
       aria-current={isActive ? "page" : undefined}
     >
       {t(translationKey)}

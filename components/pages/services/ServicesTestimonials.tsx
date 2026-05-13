@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 
 const testimonials = [
   {
@@ -45,15 +45,18 @@ export default function ServicesTestimonials() {
               Trusted on the properties that matter most
             </h2>
             <p className="mt-4 text-base leading-relaxed text-neutral-600 sm:text-lg">
-              Homeowners, builders, and landscape partners rely on us when the grade has to be right the
-              first time.
+              Homeowners, builders, and landscape partners rely on us when the
+              grade has to be right the first time.
             </p>
           </div>
           <ul className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:col-span-7">
             {testimonials.map((t) => (
               <li key={t.name}>
                 <figure className="flex h-full flex-col rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm">
-                  <div className="flex gap-0.5 text-lime-500" aria-label="5 out of 5 stars">
+                  <div
+                    className="flex gap-0.5 text-lime-500"
+                    aria-label="5 out of 5 stars"
+                  >
                     {Array.from({ length: 5 }).map((_, i) => (
                       <FaStar key={i} className="h-4 w-4" aria-hidden />
                     ))}
@@ -70,7 +73,9 @@ export default function ServicesTestimonials() {
                       className="h-10 w-10 rounded-full object-cover"
                     />
                     <div>
-                      <cite className="not-italic text-sm font-semibold text-neutral-900">{t.name}</cite>
+                      <cite className="not-italic text-sm font-semibold text-neutral-900">
+                        {t.name}
+                      </cite>
                       <p className="text-xs text-neutral-500">{t.location}</p>
                     </div>
                   </figcaption>

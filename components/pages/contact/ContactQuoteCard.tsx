@@ -4,7 +4,7 @@ import {
   FaPhone,
   FaShieldHalved,
 } from "react-icons/fa6";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 import { BUSINESS } from "@/lib/business/business";
 import type { ContactCopy } from "./contact-copy";
 import ContactQuoteForm from "./ContactQuoteForm";

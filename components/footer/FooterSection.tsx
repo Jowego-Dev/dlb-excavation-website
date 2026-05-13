@@ -1,6 +1,6 @@
 // FooterSection.tsx
 
-import { AccordionItem } from "@/components/Accordion";
+import { AccordionItem } from "@/components/ui/Accordion";
 
 import FooterSectionHeading from "./FooterSectionHeading";
 import { cn } from "@/lib/utils";

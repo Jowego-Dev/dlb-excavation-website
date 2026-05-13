@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 
 export default function AboutHero() {
   return (
@@ -29,9 +29,10 @@ export default function AboutHero() {
             About DLB Excavation
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
-            We are a local excavation and site-prep team focused on precision grading, drainage,
-            and hardscape-ready foundations—delivered with clear communication and respect for your
-            property across the Ottawa–Gatineau region.
+            We are a local excavation and site-prep team focused on precision
+            grading, drainage, and hardscape-ready foundations—delivered with
+            clear communication and respect for your property across the
+            Ottawa–Gatineau region.
           </p>
         </div>
       </Container>

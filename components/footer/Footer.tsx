@@ -1,5 +1,5 @@
-import Container from "../Container";
-import Logo from "../Logo";
+import Container from "../ui/Container";
+import Logo from "../ui/Logo";
 import { footerStyles as styles } from "@/lib/styles/components/footerStyles";
 import { FaPhone, FaClock } from "react-icons/fa6";
 import { IoLocation } from "react-icons/io5";
@@ -12,9 +12,9 @@ import {
   buildServiceHref,
 } from "@/lib/navigation/navigation.utils";
 import { BUSINESS } from "@/lib/business/business";
-import { CTAButton } from "../CTAButton";
+import { CTAButton } from "../ui/CTAButton";
 import { FaFacebookF } from "react-icons/fa";
-import ActionButton from "../ActionButton";
+import ActionButton from "../ui/ActionButton";
 import FooterNavList from "./FooterNavList";
 import FooterInfoItem from "./FooterInfoItem";
 import FooterSection from "./FooterSection";

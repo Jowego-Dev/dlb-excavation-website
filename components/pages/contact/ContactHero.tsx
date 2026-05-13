@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Caveat } from "next/font/google";
 import { FaPhone } from "react-icons/fa6";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 import { BUSINESS } from "@/lib/business/business";
 import type { ContactCopy } from "./contact-copy";
 

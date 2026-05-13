@@ -5,7 +5,7 @@ import {
   FaLocationDot,
   FaShieldHalved,
 } from "react-icons/fa6";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 import { buildLocalizedPath } from "@/lib/navigation/navigation.utils";
 import { ROUTES } from "@/lib/routes";
 import type { ContactCopy } from "./contact-copy";
@@ -64,8 +64,14 @@ export default function ContactInfoGrid({ locale, copy }: Props) {
             </div>
             <ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
               {areas.map((area) => (
-                <li key={area} className="flex items-center gap-2 text-sm text-slate-700">
-                  <FaCheck className="h-4 w-4 shrink-0 text-[#4B6F28]" aria-hidden />
+                <li
+                  key={area}
+                  className="flex items-center gap-2 text-sm text-slate-700"
+                >
+                  <FaCheck
+                    className="h-4 w-4 shrink-0 text-[#4B6F28]"
+                    aria-hidden
+                  />
                   {area}
                 </li>
               ))}
@@ -123,8 +129,14 @@ export default function ContactInfoGrid({ locale, copy }: Props) {
             </div>
             <ul className="mt-6 space-y-3">
               {copy.gridWhyItems.map((item) => (
-                <li key={item} className="flex gap-3 text-sm text-slate-700 sm:text-base">
-                  <FaCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#4B6F28]" aria-hidden />
+                <li
+                  key={item}
+                  className="flex gap-3 text-sm text-slate-700 sm:text-base"
+                >
+                  <FaCheck
+                    className="mt-0.5 h-4 w-4 shrink-0 text-[#4B6F28]"
+                    aria-hidden
+                  />
                   {item}
                 </li>
               ))}

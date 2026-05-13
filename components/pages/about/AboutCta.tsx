@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { FaPhone } from "react-icons/fa6";
-import ActionButton from "@/components/ActionButton";
-import Container from "@/components/Container";
-import { CTAButton } from "@/components/CTAButton";
+import ActionButton from "@/components/ui/ActionButton";
+import Container from "@/components/ui/Container";
+import { CTAButton } from "@/components/ui/CTAButton";
 import { BUSINESS } from "@/lib/business/business";
 
 export default function AboutCta() {

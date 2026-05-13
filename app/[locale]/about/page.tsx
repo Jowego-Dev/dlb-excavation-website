@@ -1,7 +1,7 @@
-import AboutCta from "@/components/about/AboutCta";
-import AboutHero from "@/components/about/AboutHero";
-import AboutValuesWhyChoose from "@/components/about/AboutValuesWhyChoose";
-import AboutCompany from "@/components/about/AboutCompany";
+import AboutCta from "@/components/pages/about/AboutCta";
+import AboutHero from "@/components/pages/about/AboutHero";
+import AboutValuesWhyChoose from "@/components/pages/about/AboutValuesWhyChoose";
+import AboutCompany from "@/components/pages/about/AboutCompany";
 
 type Props = {
   params: Promise<{ locale: string }>;

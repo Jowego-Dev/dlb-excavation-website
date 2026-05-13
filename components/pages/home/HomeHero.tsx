@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Container from "../Container";
-import { CTAButton } from "../CTAButton";
-import { LinkButton } from "../LinkButton";
+import Container from "@/components/ui/Container";
+import { CTAButton } from "@/components/ui/CTAButton";
+import { LinkButton } from "@/components/ui/LinkButton";
 
 type Props = {
   locale: string;

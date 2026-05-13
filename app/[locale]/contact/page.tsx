@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import ContactPageView from "@/components/contact/ContactPageView";
+import ContactPageView from "@/components/pages/contact/ContactPageView";
 import { SERVICES } from "@/lib/services/services";
 
 type Props = {
