@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import TrustItem from "./TrustItem";
 import Section from "@/components/ui/Section";
+import Eyebrow from "@/components/ui/Eyebrow";
 
 export type TrustBarItem = {
   icon: ReactNode;
@@ -26,17 +27,7 @@ export default function TrustBarSection({
     <Section aria-labelledby={headingId}>
       <div className="flex flex-col gap-6">
         <header className="text-center">
-          {eyebrow && (
-            <div className="mb-4 flex items-center justify-center gap-3">
-              <span aria-hidden className="h-px w-8 bg-accent/60" />
-
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-lime-700 sm:text-sm">
-                {eyebrow}
-              </span>
-
-              <span aria-hidden className="h-px w-8 bg-accent/60" />
-            </div>
-          )}
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
 
           <h2
             id={headingId}
