@@ -16,7 +16,7 @@ export default function ServicesFinalCta() {
         alt=""
         fill
         sizes="100vw"
-        className="-z-1 object-cover object-center"
+        className="-z-10 object-cover object-center"
       />
       <div
         className="absolute inset-0 bg-linear-to-r from-black/80 via-black/70 to-black/55"

@@ -16,7 +16,7 @@ export default function AboutCta() {
         alt=""
         fill
         sizes="100vw"
-        className="-z-1 object-cover object-center"
+        className="-z-10 object-cover object-center"
       />
       <div
         className="absolute inset-0 bg-linear-to-r from-black/85 via-black/78 to-black/65"
