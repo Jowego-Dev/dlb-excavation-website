@@ -4,6 +4,7 @@ import HomeProcess from "@/components/pages/home/HomeProcess";
 import HomeServices from "@/components/pages/home/HomeServices";
 import HomeStatsStrip from "@/components/pages/home/HomeStatsStrip";
 import HomeTestimonials from "@/components/pages/home/HomeTestimonials";
+import HomeTrustBar from "@/components/pages/home/HomeTrustBar";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -15,9 +16,10 @@ export default async function Home({ params }: Props) {
   return (
     <main className="flex min-h-0 flex-1 flex-col overflow-x-hidden">
       <HomeHero locale={locale} />
-      <HomeStatsStrip />
       <HomeServices locale={locale} />
       <HomeBeforeAfter locale={locale} />
+      <HomeTrustBar />
+      <HomeStatsStrip />
       <HomeTestimonials />
       <HomeProcess />
     </main>
