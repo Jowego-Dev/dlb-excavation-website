@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import Container from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
+import Section from "../ui/Section";
 
 export type HeroVariant = "home" | "page";
 
@@ -71,34 +72,36 @@ export default function Hero({
   const vs = variantStyles[variant];
 
   return (
-    <section
-      aria-labelledby={headingId}
+    <Section
       className={cn("relative isolate overflow-hidden", vs.section, className)}
+      containerClassName={cn("relative", vs.container)}
+      padding="none"
+      background="transparent"
+      beforeContainer={
+        <>
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            priority={priority}
+            sizes="100vw"
+            className={vs.image}
+          />
+          <div className={vs.overlay} aria-hidden />
+        </>
+      }
     >
-      <Image
-        src={image}
-        alt={imageAlt}
-        fill
-        priority={priority}
-        sizes="100vw"
-        className={vs.image}
-      />
+      <div className={vs.content}>
+        {eyebrow ? <div className={vs.eyebrowWrapper}>{eyebrow}</div> : null}
 
-      <div className={vs.overlay} aria-hidden />
+        <h1 id={headingId} className={vs.title}>
+          {title}
+        </h1>
 
-      <Container className={cn("relative", vs.container)}>
-        <div className={vs.content}>
-          {eyebrow ? <div className={vs.eyebrowWrapper}>{eyebrow}</div> : null}
+        <div className={vs.description}>{description}</div>
 
-          <h1 id={headingId} className={vs.title}>
-            {title}
-          </h1>
-
-          <div className={vs.description}>{description}</div>
-
-          {children ? <div className={vs.children}>{children}</div> : null}
-        </div>
-      </Container>
-    </section>
+        {children ? <div className={vs.children}>{children}</div> : null}
+      </div>
+    </Section>
   );
 }
