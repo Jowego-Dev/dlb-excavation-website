@@ -34,7 +34,9 @@ export default function HomeTestimonials() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-lime-600">What our clients say</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-lime-600">
+              What our clients say
+            </p>
             <h2
               id="home-testimonials-heading"
               className="mt-2 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl"
@@ -46,7 +48,10 @@ export default function HomeTestimonials() {
             {testimonials.map((t) => (
               <li key={t.name}>
                 <figure className="flex h-full flex-col rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm">
-                  <div className="flex gap-0.5 text-lime-500" aria-label="5 out of 5 stars">
+                  <div
+                    className="flex gap-0.5 text-lime-500"
+                    aria-label="5 out of 5 stars"
+                  >
                     {Array.from({ length: 5 }).map((_, i) => (
                       <FaStar key={i} className="h-4 w-4" aria-hidden />
                     ))}
@@ -63,7 +68,9 @@ export default function HomeTestimonials() {
                       className="h-10 w-10 rounded-full object-cover"
                     />
                     <div>
-                      <cite className="not-italic text-sm font-semibold text-neutral-900">{t.name}</cite>
+                      <cite className="not-italic text-sm font-semibold text-neutral-900">
+                        {t.name}
+                      </cite>
                       <p className="text-xs text-neutral-500">{t.location}</p>
                     </div>
                   </figcaption>

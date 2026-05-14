@@ -58,7 +58,7 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900 shadow-xl ring-1 ring-white/10 sm:aspect-video sm:rounded-2xl"
+      className="relative aspect-4/3 w-full overflow-hidden bg-neutral-900 shadow-xl ring-1 ring-white/10 sm:aspect-video"
       onPointerDown={(e) => {
         dragging.current = true;
         e.currentTarget.setPointerCapture(e.pointerId);

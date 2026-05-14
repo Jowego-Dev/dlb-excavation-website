@@ -1,5 +1,5 @@
 import { FaCheckCircle, FaFileAlt, FaLeaf, FaPencilAlt } from "react-icons/fa";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 
 const steps = [
   {
@@ -47,7 +47,8 @@ export default function ServicesProcess() {
               Simple milestones, zero guesswork
             </h2>
             <p className="mt-4 text-base leading-relaxed text-neutral-600 sm:text-lg">
-              Whether we are on site for two days or two weeks, you always know what happens next.
+              Whether we are on site for two days or two weeks, you always know
+              what happens next.
             </p>
           </div>
           <div className="lg:col-span-8">
@@ -65,14 +66,26 @@ export default function ServicesProcess() {
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lime-400 text-sm font-bold text-neutral-900">
                         {step.n}
                       </span>
-                      <step.icon className="mt-2 h-5 w-5 text-lime-700" aria-hidden />
+                      <step.icon
+                        className="mt-2 h-5 w-5 text-lime-700"
+                        aria-hidden
+                      />
                     </div>
-                    <h3 className="mt-4 text-base font-bold text-neutral-900">{step.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">{step.body}</p>
+                    <h3 className="mt-4 text-base font-bold text-neutral-900">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                      {step.body}
+                    </p>
                   </div>
                   {i < steps.length - 1 ? (
-                    <div className="my-4 flex justify-center lg:hidden" aria-hidden>
-                      <span className="text-2xl font-light text-neutral-300">↓</span>
+                    <div
+                      className="my-4 flex justify-center lg:hidden"
+                      aria-hidden
+                    >
+                      <span className="text-2xl font-light text-neutral-300">
+                        ↓
+                      </span>
                     </div>
                   ) : null}
                 </li>

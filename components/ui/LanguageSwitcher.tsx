@@ -8,6 +8,8 @@ import { locales, Locale } from "@/i18n/config";
 import { GrLanguage } from "react-icons/gr";
 import { FaCheck } from "react-icons/fa";
 import { languageSwitcherStyles as styles } from "@/lib/styles/components/languageSwitcherStyles";
+import { useNavbarChromeOptional } from "@/components/navigation/NavigationChrome";
+import { cn } from "@/lib/utils";
 
 const LABELS: Record<Locale, string> = {
   en: "English",
@@ -17,6 +19,8 @@ const LABELS: Record<Locale, string> = {
 export default function LanguageSwitcher() {
   const pathname = usePathname();
   const currentLocale = useLocale();
+  const navChrome = useNavbarChromeOptional();
+  const onHeroSurface = navChrome?.surface === "hero";
 
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -72,16 +76,32 @@ export default function LanguageSwitcher() {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls="language-menu"
-        className={`flex items-center gap-2 py-4 px-3 md:py-2 -mx-2 ${styles.buttonBase} ${styles.buttonDefault} ${styles.buttonHover}`}
+        className={cn(
+          "flex items-center gap-2 py-4 px-3 md:py-2 -mx-2",
+          styles.buttonBase,
+          onHeroSurface
+            ? "text-white hover:text-white/90"
+            : `${styles.buttonDefault} ${styles.buttonHover}`,
+        )}
       >
         <GrLanguage className="w-5 h-5" />
 
-        <span className={`items-center gap-1 ${styles.languageBase}`}>
-          <span className={currentLocale === "en" ? styles.languageActive : ""}>
+        <span className={cn("items-center gap-1", styles.languageBase)}>
+          <span
+            className={cn(
+              currentLocale === "en" &&
+                (onHeroSurface ? "text-cta font-semibold" : styles.languageActive),
+            )}
+          >
             EN
           </span>
           <span>/</span>
-          <span className={currentLocale === "fr" ? styles.languageActive : ""}>
+          <span
+            className={cn(
+              currentLocale === "fr" &&
+                (onHeroSurface ? "text-cta font-semibold" : styles.languageActive),
+            )}
+          >
             FR
           </span>
         </span>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { FaPhone } from "react-icons/fa6";
-import ActionButton from "@/components/ActionButton";
-import Container from "@/components/Container";
-import { CTAButton } from "@/components/CTAButton";
+import ActionButton from "@/components/ui/ActionButton";
+import Container from "@/components/ui/Container";
+import { CTAButton } from "@/components/ui/CTAButton";
 import { BUSINESS } from "@/lib/business/business";
 
 export default function AboutCta() {
@@ -16,7 +16,7 @@ export default function AboutCta() {
         alt=""
         fill
         sizes="100vw"
-        className="-z-1 object-cover object-center"
+        className="-z-10 object-cover object-center"
       />
       <div
         className="absolute inset-0 bg-linear-to-r from-black/85 via-black/78 to-black/65"

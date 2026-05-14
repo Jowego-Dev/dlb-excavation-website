@@ -6,7 +6,7 @@ import {
   FaMapLocationDot,
   FaUserCheck,
 } from "react-icons/fa6";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 
 const features = [
   {

@@ -1,4 +1,4 @@
-import ServicesPageView from "@/components/services/ServicesPageView";
+import ServicesPageView from "@/components/pages/services/ServicesPageView";
 
 type Props = {
   params: Promise<{ locale: string }>;

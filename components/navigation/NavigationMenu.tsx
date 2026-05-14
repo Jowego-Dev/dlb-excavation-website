@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { PAGES } from "@/lib/navigation/pages";
 import Link from "next/link";
-import LanguageToggler from "../LanguageSwitcher";
+import LanguageToggler from "../ui/LanguageSwitcher";
 import { navigationMenuStyles as styles } from "@/lib/styles/navigation/navigationMenuStyles";
 import { FaChevronRight } from "react-icons/fa6";
 import { MdClose } from "react-icons/md";
@@ -14,7 +14,8 @@ import {
   buildLocalizedPath,
   isActivePath,
 } from "@/lib/navigation/navigation.utils";
-import { CTAButton } from "../CTAButton";
+import { CTAButton } from "../ui/CTAButton";
+import { useNavbarChrome } from "./NavigationChrome";
 
 export default function NavigationMenu() {
   const [open, setOpen] = useState(false);
@@ -22,8 +23,14 @@ export default function NavigationMenu() {
   const menuRef = useRef<HTMLDivElement>(null);
   const locale = useLocale();
   const t = useTranslations("navigation");
+  const { setMobileMenuOpen } = useNavbarChrome();
 
   const closeMenu = () => setOpen(false);
+
+  useEffect(() => {
+    setMobileMenuOpen(open);
+    return () => setMobileMenuOpen(false);
+  }, [open, setMobileMenuOpen]);
 
   useEffect(() => {
     closeMenu();

@@ -1,9 +1,9 @@
-import HomeBeforeAfter from "@/components/home/HomeBeforeAfter";
-import HomeHero from "@/components/home/HomeHero";
-import HomeProcess from "@/components/home/HomeProcess";
-import HomeServices from "@/components/home/HomeServices";
-import HomeStatsStrip from "@/components/home/HomeStatsStrip";
-import HomeTestimonials from "@/components/home/HomeTestimonials";
+import HomeBeforeAfter from "@/components/pages/home/HomeBeforeAfter";
+import HomeHero from "@/components/pages/home/HomeHero";
+import HomeProcess from "@/components/pages/home/HomeProcess";
+import HomeServices from "@/components/pages/home/HomeServices";
+import HomeStatsStrip from "@/components/pages/home/HomeStatsStrip";
+import HomeTestimonials from "@/components/pages/home/HomeTestimonials";
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -7,7 +7,7 @@ import {
   FaPeopleGroup,
   FaShieldHalved,
 } from "react-icons/fa6";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 
 const values = [
   {
@@ -100,7 +100,9 @@ export default function AboutValuesWhyChoose() {
                   >
                     <Icon className="h-5 w-5" />
                   </span>
-                  <h3 className="mt-4 text-lg font-semibold text-neutral-900">{title}</h3>
+                  <h3 className="mt-4 text-lg font-semibold text-neutral-900">
+                    {title}
+                  </h3>
                   <p className="mt-2 text-sm leading-relaxed text-neutral-600 sm:text-base">
                     {text}
                   </p>
@@ -127,10 +129,18 @@ export default function AboutValuesWhyChoose() {
                   className="flex gap-4 overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:gap-5 sm:p-5"
                 >
                   <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-lg bg-neutral-200 sm:h-28 sm:w-36">
-                    <Image src={image} alt={alt} fill className="object-cover" sizes="144px" />
+                    <Image
+                      src={image}
+                      alt={alt}
+                      fill
+                      className="object-cover"
+                      sizes="144px"
+                    />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-lg font-semibold text-neutral-900">{title}</h3>
+                    <h3 className="text-lg font-semibold text-neutral-900">
+                      {title}
+                    </h3>
                     <p className="mt-2 text-sm leading-relaxed text-neutral-600 sm:text-base">
                       {description}
                     </p>

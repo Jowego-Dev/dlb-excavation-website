@@ -1,5 +1,5 @@
-import BeforeAfterSlider from "@/components/home/BeforeAfterSlider";
-import Container from "@/components/Container";
+import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
+import Container from "@/components/ui/Container";
 
 export default function ServicesBeforeAfter() {
   return (
@@ -20,8 +20,9 @@ export default function ServicesBeforeAfter() {
               Proof in every pass
             </h2>
             <p className="mt-4 text-base leading-relaxed text-white/85 sm:text-lg">
-              Compare finished drainage, clean edges, and restored turf lines. Each slider highlights how
-              thoughtful grading changes the way water moves—and how your property feels day to day.
+              Compare finished drainage, clean edges, and restored turf lines.
+              Each slider highlights how thoughtful grading changes the way
+              water moves—and how your property feels day to day.
             </p>
           </div>
           <BeforeAfterSlider
