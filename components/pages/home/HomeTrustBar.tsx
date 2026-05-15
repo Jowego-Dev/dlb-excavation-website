@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa6";
 import TrustBarSection, {
   type TrustBarItem,
-} from "@/components/sections/TrustBar/TrustBar";
+} from "@/components/sections/trustBar/TrustBar";
 
 const items: TrustBarItem[] = [
   {

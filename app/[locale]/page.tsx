@@ -1,7 +1,7 @@
-import HomeBeforeAfter from "@/components/pages/home/HomeBeforeAfter";
+import HomeBeforeAfter from "@/components/pages/home/HomeProjectsPreview";
 import HomeHero from "@/components/pages/home/HomeHero";
 import HomeProcess from "@/components/pages/home/HomeProcess";
-import HomeServices from "@/components/pages/home/HomeServices";
+import HomeServicesPreview from "@/components/pages/home/HomeServicesPreview";
 import HomeStatsStrip from "@/components/pages/home/HomeStatsStrip";
 import HomeTestimonials from "@/components/pages/home/HomeTestimonials";
 import HomeTrustBar from "@/components/pages/home/HomeTrustBar";
@@ -16,7 +16,7 @@ export default async function Home({ params }: Props) {
   return (
     <main className="flex min-h-0 flex-1 flex-col overflow-x-hidden">
       <HomeHero locale={locale} />
-      <HomeServices locale={locale} />
+      <HomeServicesPreview locale={locale} />
       <HomeBeforeAfter locale={locale} />
       <HomeTrustBar />
       <HomeStatsStrip />
