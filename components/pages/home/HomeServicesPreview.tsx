@@ -1,5 +1,5 @@
-import ServicePreviewSection from "@/components/sections/ServicePreview/ServicePreview";
-import type { ServicePreviewItem } from "@/components/sections/ServicePreview/ServicePreview";
+import ServicePreviewSection from "@/components/sections/servicePreview/ServicePreview";
+import type { ServicePreviewItem } from "@/components/sections/servicePreview/ServicePreview";
 
 type Props = { locale: string };
 
@@ -46,13 +46,14 @@ const items: ServicePreviewItem[] = [
   },
 ];
 
-export default function HomeServices({ locale }: Props) {
+export default function HomeServicesPreview({ locale }: Props) {
   return (
     <ServicePreviewSection
       headingId="home-services-heading"
       eyebrow="EXCAVATION & LANDSCAPING SOLUTIONS"
       title="Our services"
       description="From first dig to final grade, we keep communication clear and the job site organized—so your project stays on track and on budget."
+      cta="View all our services"
       items={items}
     />
   );

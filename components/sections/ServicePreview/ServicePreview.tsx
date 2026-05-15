@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Section from "@/components/ui/Section";
 import ServicePreviewCard from "./ServicePreviewCard";
 import Eyebrow from "@/components/ui/Eyebrow";
+import { LinkButton } from "@/components/ui/LinkButton";
 
 export type ServicePreviewItem = {
   image: string;
@@ -18,6 +19,7 @@ type ServicePreviewSectionProps = {
 
   title: ReactNode;
   description?: ReactNode;
+  cta: string;
 
   items: ServicePreviewItem[];
 
@@ -26,9 +28,10 @@ type ServicePreviewSectionProps = {
 
 export default function ServicePreviewSection({
   eyebrow,
+
   title,
   description,
-
+  cta,
   items,
 
   headingId,
@@ -70,6 +73,9 @@ export default function ServicePreviewSection({
           ))}
         </div>
       </div>
+      <LinkButton href="/services" className="mt-12 mx-auto w-fit min-w-64">
+        {cta}
+      </LinkButton>
     </Section>
   );
 }
