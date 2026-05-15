@@ -2,7 +2,7 @@ import HomeBeforeAfter from "@/components/pages/home/HomeProjectsPreview";
 import HomeHero from "@/components/pages/home/HomeHero";
 import HomeProcess from "@/components/pages/home/HomeProcess";
 import HomeServicesPreview from "@/components/pages/home/HomeServicesPreview";
-import HomeStatsStrip from "@/components/pages/home/HomeStatsStrip";
+import HomeStatsStrip from "@/components/pages/home/HomeStatsBar";
 import HomeTestimonials from "@/components/pages/home/HomeTestimonials";
 import HomeTrustBar from "@/components/pages/home/HomeTrustBar";
 
