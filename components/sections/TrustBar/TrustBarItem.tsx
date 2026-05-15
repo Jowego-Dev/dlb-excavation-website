@@ -1,19 +1,19 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export type TrustItemProps = {
+export type TrustBarItemProps = {
   icon: ReactNode;
   title: string;
   description: string;
   className?: string;
 };
 
-export default function TrustItem({
+export default function TrustBarItem({
   icon,
   title,
   description,
   className,
-}: TrustItemProps) {
+}: TrustBarItemProps) {
   return (
     <div className={cn("flex flex-col items-center text-center", className)}>
       <span

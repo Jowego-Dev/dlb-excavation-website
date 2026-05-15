@@ -6,11 +6,11 @@ import {
   FaShieldHalved,
   FaTractor,
 } from "react-icons/fa6";
-import TrustBarSection, {
-  type TrustBarItem,
+import TrustBar, {
+  type TrustBarItemData,
 } from "@/components/sections/trustBar/TrustBar";
 
-const items: TrustBarItem[] = [
+const items: TrustBarItemData[] = [
   {
     icon: <FaLocationDot className="h-5 w-5" />,
     title: "Local expertise",
@@ -51,7 +51,7 @@ const items: TrustBarItem[] = [
 
 export default function HomeTrustBar() {
   return (
-    <TrustBarSection
+    <TrustBar
       headingId="services-trust-heading"
       eyebrow="Local. Reliable."
       title="Why homeowners choose DLB Excavation"

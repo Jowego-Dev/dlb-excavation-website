@@ -1,28 +1,28 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import TrustItem from "./TrustItem";
+import TrustBarItem from "./TrustBarItem";
 import Section from "@/components/ui/Section";
 import Eyebrow from "@/components/ui/Eyebrow";
 
-export type TrustBarItem = {
+export type TrustBarItemData = {
   icon: ReactNode;
   title: string;
   description: string;
 };
 
-type TrustBarSectionProps = {
+type TrustBarProps = {
   eyebrow?: string;
   title: ReactNode;
-  items: TrustBarItem[];
+  items: TrustBarItemData[];
   headingId?: string;
 };
 
-export default function TrustBarSection({
+export default function TrustBar({
   eyebrow,
   title,
   items,
   headingId,
-}: TrustBarSectionProps) {
+}: TrustBarProps) {
   return (
     <Section aria-labelledby={headingId}>
       <div className="flex flex-col gap-6">
@@ -46,7 +46,7 @@ export default function TrustBarSection({
                 index > 0 && "md:border-l md:border-border lg:pl-8",
               )}
             >
-              <TrustItem
+              <TrustBarItem
                 icon={item.icon}
                 title={item.title}
                 description={item.description}
