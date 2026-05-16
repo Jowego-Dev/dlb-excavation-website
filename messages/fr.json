@@ -10,7 +10,18 @@
     "services": "Services",
     "cta": "Estimation gratuite",
     "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation"
+    "terms": "Conditions d'utilisation",
+    "mobileMenu": {
+      "language": "Langue",
+      "estimateSubline": "Rapide. Simple. Sans obligation.",
+      "phoneHours": "Lun–Ven 9h–17h",
+      "callPrefix": "Appelez",
+      "openMenu": "Ouvrir le menu",
+      "closeMenu": "Fermer le menu",
+      "ariaMenu": "Navigation mobile",
+      "estimateAria": "Obtenir une estimation gratuite",
+      "facebookAria": "Facebook"
+    }
   },
   "footer": {
     "cta": {
