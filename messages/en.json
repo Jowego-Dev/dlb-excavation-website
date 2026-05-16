@@ -10,7 +10,18 @@
     "services": "Services",
     "cta": "Free Estimate",
     "privacy": "Privacy Policy",
-    "terms": "Terms of service"
+    "terms": "Terms of service",
+    "mobileMenu": {
+      "language": "Language",
+      "estimateSubline": "Fast. Easy. No obligation.",
+      "phoneHours": "Mon–Fri 9am–5pm",
+      "callPrefix": "Call",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "ariaMenu": "Mobile navigation",
+      "estimateAria": "Get a free estimate",
+      "facebookAria": "Facebook"
+    }
   },
   "footer": {
     "cta": {
